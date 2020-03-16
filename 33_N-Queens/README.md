@@ -9,6 +9,7 @@ Each solution contains a distinct board configuration of the n-queens' placement
 
 ## Example
 **Example 1:**
+
 Input:
 ```sh
 1
@@ -19,6 +20,7 @@ Output:
 ```
 
 **Example 2:**
+
 Input:
 ```sh
 4
