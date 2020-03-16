@@ -8,7 +8,7 @@ Given an integer `n`, return all distinct solutions to the n-queens puzzle.
 Each solution contains a distinct board configuration of the n-queens' placement, where `'Q'` and `'.'` each indicate a queen and an empty space respectively.
 
 ## Example
-Example 1:
+**Example 1:**
 Input:
 ```sh
 1
@@ -17,7 +17,8 @@ Output:
 ```sh
 [["Q"]]
 ```
-Example 2:
+
+**Example 2:**
 Input:
 ```sh
 4
