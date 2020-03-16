@@ -7,10 +7,11 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 
 Given binary search tree: root = {6,2,8,0,4,7,9,#,#,3,5}
 
-![](https://github.com/samuelfujie/LintCode/tree/master/1131_Lowest_Common_Ancestor_of_a_Binary_Search_Tree/bst.jpg "bst image")
+![bst](https://github.com/samuelfujie/LintCode/blob/master/1131_Lowest_Common_Ancestor_of_a_Binary_Search_Tree/bst.jpg?raw=true)
 
 ## Example
 **Example 1:**
+
 Input:
 ```sh
 {6,2,8,0,4,7,9,#,#,3,5}
@@ -25,6 +26,7 @@ Explanation:
 The LCA of nodes 2 and 8 is 6.
 
 **Example 2:**
+
 Input:
 ```sh
 {6,2,8,0,4,7,9,#,#,3,5}
