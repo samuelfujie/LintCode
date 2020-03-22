@@ -9,7 +9,7 @@ class Solution:
         if len(A) <= 2:
             return max(A)
         
-        # pp = previous of previou
+        # pp = previous of previous
         pp, p = A[0], max(A[0], A[1])
         for i in range(2, len(A)):
             cur = max(pp + A[i], p)
