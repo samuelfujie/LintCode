@@ -23,6 +23,7 @@ Output:
     [5, 6, 1]
 ```
 Explanation: The buildings are look like this in the picture. The yellow part is buildings.
+
 ![example1](https://github.com/samuelfujie/LintCode/blob/master/131_The_Skyline_Problem/example1.jpg?raw=true)
 
 **Example 2:**
@@ -38,6 +39,7 @@ Output:
     [6, 9, 5]
 ```
 Explanation: The buildings are look like this in the picture. The yellow part is buildings.
+
 ![example2](https://github.com/samuelfujie/LintCode/blob/master/131_The_Skyline_Problem/example2.jpg?raw=true)
 
 ## Notice
