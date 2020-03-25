@@ -25,8 +25,8 @@ Output:
 ```sh
 [1,-1,1]
 ```
-Explanation：
-cache cap is 2，set(2,1)，set(1, 1)，get(2) and return 1，set(4,1) and delete (1,1)，because （1,1）is the least use，get(1) and return -1，get(2) and return 1.
+Explanation:
+Cache cap is 2，set(2,1)，set(1, 1)，get(2) and return 1，set(4,1) and delete (1,1)，because （1,1）is the least use，get(1) and return -1，get(2) and return 1.
 
 **Example 2:**
 
@@ -43,5 +43,5 @@ Output:
 ```sh
 [1,-1,2]
 ```
-Explanation：
-cache cap is 1，set(2,1)，get(2) and return 1，set(3,2) and delete (2,1)，get(2) and return -1，get(3) and return 2.
+Explanation:
+Cache cap is 1，set(2,1)，get(2) and return 1，set(3,2) and delete (2,1)，get(2) and return -1，get(3) and return 2.
