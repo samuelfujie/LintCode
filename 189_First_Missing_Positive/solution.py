@@ -8,7 +8,7 @@ class Solution:
         index = 0
         while index < n:
             position = A[index] - 1
-            if position not in range(0, n) or position == index or A[position] == A[index]:
+            if position not in range(0, n) or A[position] == A[index]:
                 index += 1
                 continue
             A[index], A[position] = A[position], A[index]
