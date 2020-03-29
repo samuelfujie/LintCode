@@ -13,11 +13,11 @@ class Solution:
     @return: the in-order predecessor of the given node in the BST
     """
     def inorderPredecessor(self, root, p):
-        succ = None
+        predecessor = None
         while root:
             if p.val <= root.val:
                 root = root.left
             else:
-                succ = root
+                predecessor = root
                 root = root.right
-        return succ
+        return predecessor
