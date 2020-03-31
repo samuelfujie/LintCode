@@ -12,11 +12,12 @@ class Solution:
                 num = expression[start:i]
                 ans = self.add(ans, num)
                 start = i
-        return ans if ans[0] != "+" else ans[1:]
+        return ans
     
     def add(self, a, b):
         if a == "0/1":
-            return b
+            return b if b[0] != '+' else b[1:]
+
         (an, ad), (bn, bd) = map(int, a.split("/")), map(int, b.split("/"))
         lcm = self.lcm(ad, bd)
         an, bn = an * (lcm // ad), bn * (lcm // bd)
