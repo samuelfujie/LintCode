@@ -27,7 +27,7 @@ class Solution:
     
     def gcd(self, a, b):
         if b == 0:
-            return a
+            return abs(a)
         return self.gcd(b, a % b)
     
     def lcm(self, a, b):
