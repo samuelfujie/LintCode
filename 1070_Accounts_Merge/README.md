@@ -18,7 +18,6 @@ Input:
 		["John", "johnsmith@mail.com", "john_newyork@mail.com"],
 		["Mary", "mary@mail.com"]
 	]
-	
 ```
 Output:
 ```sh
