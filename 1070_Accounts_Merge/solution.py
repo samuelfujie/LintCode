@@ -3,6 +3,46 @@ class Solution:
     @param accounts: List[List[str]]
     @return: return a List[List[str]]
     """
+
+    """
+    Solution 1: DFS in undirected graph
+    """
+    def accountsMerge(self, accounts):
+        results = []
+        if not accounts:
+            return results
+        
+        email_to_name = {}
+        graph = collections.defaultdict(set)
+        
+        for account in accounts:
+            name = account[0]
+            for email in account[1:]:
+                email_to_name[email] = name
+                # connect the graph
+                graph[email].add(account[1])
+                graph[account[1]].add(email)
+        
+        visited = set([])
+        for e in graph:
+            if e not in visited:
+                visited.add(e)
+                email_list = []
+                self.dfs(e, graph, visited, email_list)
+                results.append([email_to_name[e]] + sorted(email_list))
+                
+        return results
+    
+    def dfs(self, e, graph, visited, email_list):
+        email_list.append(e)
+        for neighbor in graph[e]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                self.dfs(neighbor, graph, visited, email_list)
+
+    """
+    Solution 2: Union Find
+    """
     def __init__(self):
         self.father = {}
         
