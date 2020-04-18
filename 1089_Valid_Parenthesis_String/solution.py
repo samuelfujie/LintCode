@@ -4,12 +4,22 @@ class Solution:
     @return: whether this string is valid
     """
     def checkValidString(self, s):
-        lo = hi = 0
-        for c in s:
-            lo += 1 if c == '(' else -1
-            hi += 1 if c != ')' else -1
-            if hi < 0:
-                break
-            lo = max(lo, 0)
+        if s is None:
+            return False
 
-        return lo == 0
+        low = high = 0
+        for char in s:
+            if char == '(':
+                low += 1
+                high += 1
+            if char == '*':
+                low -= 1
+                high += 1
+            if char == ')':
+                low -= 1
+                high -= 1
+            if high < 0:
+                return False
+            low = max(low, 0)
+
+        return low == 0
