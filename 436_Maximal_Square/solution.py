@@ -7,21 +7,20 @@ class Solution:
         if not matrix or not matrix[0]:
             return 0
 
-        n, m = len(matrix), len(matrix[0])
+        row, col = len(matrix), len(matrix[0])
+        dp = [[0] * col for _ in range(row)]
+        max_side = 0
 
-        # intialization
-        f = [[0] * m for _ in range(n)]
-        for i in range(m):
-            f[0][i] = matrix[0][i]
+        for i in range(row):
+            for j in range(col):
+                if matrix[i][j] == 0:
+                    continue
 
-        edge = max(matrix[0])
-        for i in range(1, n):
-            f[i][0] = matrix[i][0]
-            for j in range(1, m):
-                if matrix[i][j]:
-                    f[i][j] = min(f[i - 1][j], f[i][j - 1], f[i-1][j - 1]) + 1
+                if i == 0 or j == 0:
+                    dp[i][j] = matrix[i][j]
                 else:
-                    f[i][j] = 0
-            edge = max(edge, max(f[i]))
+                    dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1
 
-        return edge * edge
+                max_side = max(max_side, dp[i][j])
+
+        return max_side ** 2
